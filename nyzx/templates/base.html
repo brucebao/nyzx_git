@@ -1,0 +1,18 @@
+{% load cms_tags sekizai_tags %}
+{% load menu_tags %}
+<!DOCTYPE html>
+<html>
+<head>
+    {% render_block "css" %}
+</head>
+<body>
+    {% cms_toolbar %}
+    {% show_breadcrumb 2 %}
+
+    {% page_attribute "page_title" %}
+
+    {% placeholder base_content %}
+    {% block base_content %}{% endblock %}
+    {% render_block "js" %}
+</body>
+</html>
